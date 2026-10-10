@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonderfahrten Rhein-Neckar Spotter</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-red: #ef4444;
+            --accent-gold: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0 30px 0;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--text-main);
+        }
+
+        header p {
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .event-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background-color: var(--accent-red);
+        }
+
+        .event-card.steam::before {
+            background-color: var(--accent-gold);
+        }
+
+        .date-badge {
+            display: inline-block;
+            background-color: #334155;
+            color: var(--text-main);
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .event-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 15px 0;
+            background: rgba(0,0,0,0.2);
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .detail-item {
+            font-size: 0.95rem;
+        }
+
+        .detail-label {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .description {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--accent-red);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🚆 Sonderfahrten Rhein-Neckar</h1>
+        <p>Spotter- & Fahrplanübersicht für Heidelberg & Umgebung</p>
+    </header>
+
+    <!-- Event 1 -->
+    <div class="event-card">
+        <span class="date-badge">Samstag, 24. Oktober 2026</span>
+        <h2 class="event-title">Museums-IC "Bodensee" (NostalgieZugReisen)</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <span class="detail-label">Triebfahrzeug</span>
+                <strong>BR 103 (Schnellfahr-Ellok)</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Heidelberg Hbf (An/Ab)</span>
+                <strong>07:42 Uhr (Gleis 7)</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Wagengarnitur</span>
+                <strong>TEE/IC-Klassiker 1980er</strong>
+            </div>
+        </div>
+        <p class="description">
+            Klassischer Bundesbahn-InterCity von Koblenz/Mannheim über Heidelberg Hbf an den Bodensee. Ein absolutes Fotohighlight in den Morgenstunden!
+        </p>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-card steam">
+        <span class="date-badge">Samstag, 05. Dezember 2026</span>
+        <h2 class="event-title">Advents-Dampfsonderzug</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <span class="detail-label">Triebfahrzeug</span>
+                <strong>Dampflok 52 7409</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Ort</span>
+                <strong>Heidelberg Hbf / Neckartal</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Wagengarnitur</span>
+                <strong>Historische Eilzugwagen</strong>
+            </div>
+        </div>
+        <p class="description">
+            Schwere Güterzugdampflok bringt historischen Sonderzug zum Heidelberger Weihnachtsmarkt. Sound-Garantie beim Anfahren am Bahnsteig!
+        </p>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-card">
+        <span class="date-badge">Sonntag, 06. Dezember 2026</span>
+        <h2 class="event-title">Weihnachtsmarkt-Express 2 (EFZ)</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <span class="detail-label">Triebfahrzeug</span>
+                <strong>E-Lok (z. B. NeSA 140 797)</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Strecke</span>
+                <strong>Rottweil – Stuttgart – HD Hbf</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Veranstalter</span>
+                <strong>Eisenbahnfreunde Zollernbahn</strong>
+            </div>
+        </div>
+        <p class="description">
+            Nikolaus-Sonderfahrt aus dem Schwarzwald/Gäubahn-Bereich über Stuttgart direkt zum Heidelberger Hauptbahnhof.
+        </p>
+    </div>
+
+    <!-- Event 4 -->
+    <div class="event-card">
+        <span class="date-badge">Samstag, 12. Dezember 2026</span>
+        <h2 class="event-title">Neckartal-Panoramafahrt "Roter Flitzer"</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <span class="detail-label">Triebfahrzeug</span>
+                <strong>VT 98 / 798 (Schienenbus)</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Strecke</span>
+                <strong>Neckartalbahn bis HD Hbf</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Zeitfenster</span>
+                <strong>Ankunft ca. Mittagszeit</strong>
+            </div>
+        </div>
+        <p class="description">
+            Der Bundesbahn-Kulttriebwagen der 50er/60er Jahre befährt die malerische Neckartalstrecke nach Heidelberg.
+        </p>
+    </div>
+
+    <!-- Event 5 -->
+    <div class="event-card steam">
+        <span class="date-badge">Samstag, 19. Dezember 2026</span>
+        <h2 class="event-title">Schnellzugdampf zum Weihnachtsmarkt (EFZ)</h2>
+        <div class="details-grid">
+            <div class="detail-item">
+                <span class="detail-label">Triebfahrzeug</span>
+                <strong>01 519 (Schnellzug-Dampflok)</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Ort</span>
+                <strong>Heidelberg Hbf</strong>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Treibraddurchmesser</span>
+                <strong>2,00 Meter</strong>
+            </div>
+        </div>
+        <p class="description">
+            Eine der mächtigsten Schnellzuglokomotiven Deutschlands kommt mit dem Weihnachtsmarkt-Sonderzug der EFZ nach Heidelberg.
+        </p>
+    </div>
+
+    <footer>
+        <p>Daten basieren auf Veröffentlichungen der Vereine (EFZ, NostalgieZugReisen, Roter Flitzer).<br>
+        Fahrzeiten vor der Anreise immer auf <a href="https://www.drehscheibe-online.de" target="_blank">Drehscheibe Online</a> verifizieren.</p>
+    </footer>
+</div>
+
+</body>
+</html>
